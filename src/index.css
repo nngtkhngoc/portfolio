@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Paytone One", sans-serif;
+  --color-primary: #ed8a92;
+  --color-secondary: #5e794c;
+  --color-side: #edc5c8;
+  --color-background: #f5f0de;
+  --animate-bounce: bounce 2s ease-in-out infinite;
+  --animate-typing: typing 3s steps(20) infinite alternate, blink 0.7s infinite;
+  --animate-zoom: zoom 2s infinite alternate;
+  --animate-jump: jump 2s infinite;
+  --animate-slider: slider 40s linear infinite;
+  --shadow-custom: 5px 5px 0 #5e794c;
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-2%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  @keyframes typing {
+    0% {
+      width: 0%;
+      visibility: hidden;
+    }
+    100% {
+      width: 33%;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: "white";
+    }
+  }
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  @keyframes jump {
+    0%,
+    100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  @keyframes slider {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(calc(-250px * 6));
+    }
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
