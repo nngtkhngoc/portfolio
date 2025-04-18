@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="w-full items-center justify-center flex flex-col py-3 relative font-primary gap-8 md:grid md:grid-cols-2 md:px-20 xl:gap-x-10">
+    <div
+      id="home"
+      className="w-full items-center justify-center flex flex-col py-3 relative font-primary gap-8 md:grid md:grid-cols-2 md:px-20 xl:gap-x-10"
+    >
       <div className="w-full items-center justify-center flex flex-col  md:order-1 md:col-span-1 ">
         <motion.img
           initial={{ opacity: 1, y: 0 }}
@@ -69,7 +72,7 @@ export default function Home() {
           in full-stack web development. Passionate about problem solving, quick
           to learn, and eager to contribute to a dynamic product team.
         </div>
-        <div className="mt-5 text-[20px] text-side bg-secondary transform rounded-[6px] px-6 py-3  relative z-10 hover:before:translate-x-0 hover:before:translate-y-0 before:transition-all before:duration-500 before:-z-5 before:w-full before:h-full before:border-side before:border-[1px] before:top-0 before:left-0 before:border before:absolute before:rounded-[6px] before:transform before:-translate-x-[5px] before:-translate-y-[5px]">
+        <div className="mt-5 text-[20px] text-side bg-secondary transform rounded-[6px] px-6 py-3  relative z-10 hover:before:translate-x-0 hover:before:translate-y-0 before:transition-all before:duration-500 before:-z-5 hover:before:bg-side hover:text-secondary before:w-full before:h-full before:border-side before:border-[1px] before:top-0 before:left-0 before:border before:absolute before:rounded-[6px] before:transform before:-translate-x-[5px] before:-translate-y-[5px]">
           Resume
         </div>
       </div>

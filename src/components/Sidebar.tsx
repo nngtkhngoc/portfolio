@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { FloatButton } from "antd";
 import { House, User, FolderOpenDot, Phone } from "lucide-react";
 import { ReactNode } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface option {
   text: string;
@@ -40,20 +39,27 @@ export default function Sidebar() {
   ];
   const renderOptions = (options: option[]) => {
     return options.map((option, index) => (
-      <FloatButton
+      <motion.a
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0 }}
         key={index}
-        icon={option.icon}
-        tooltip={<div className="font-primary ">{option.text}</div>}
-        style={{ backgroundColor: "#edc5c8" }}
-      />
+        className="bg-white shadow-lg rounded-full w-[40px] h-[40px] flex flex-col items-center justify-center focus:bg-side"
+        onClick={() => {
+          console.log(option.text);
+        }}
+        href={`#${option.text.toLowerCase()}`}
+      >
+        {option.icon}
+      </motion.a>
     ));
   };
 
   return (
-    <div className="font-primary">
-      <label className="flex flex-col gap-2 w-8 z-50 absolute right-4 top-7">
+    <div className="font-primary flex relative">
+      <label className="flex flex-col gap-2 w-8  absolute -right-5 -top-3 ">
         <input
-          className="peer hidden "
+          className="peer hidden  absolute -right-5 -top-3"
           type="checkbox"
           onChange={() => {
             setOpenSidebar(!openSidebar);
@@ -63,39 +69,21 @@ export default function Sidebar() {
         <div className="rounded-2xl h-[3px] w-1/2 bg-primary duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]"></div>
         <div className="rounded-2xl h-[3px] w-full bg-primary duration-500 peer-checked:-rotate-45"></div>
         <div className="rounded-2xl h-[3px] w-1/2 bg-primary duration-500 place-self-end peer-checked:rotate-[225deg] origin-left peer-checked:translate-x-[12px] peer-checked:translate-y-[1px]"></div>
-      </label>
-
-      <AnimatePresence initial={false}>
-        {openSidebar ? (
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.8,
-              x: 100,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              x: 0,
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0.8,
-              x: 100,
-            }}
-            transition={{ duration: 0.6 }}
-            className="fixed right-0 top-72 h-max w-max"
-          >
-            <FloatButton.Group
-              shape="circle"
-              style={{ top: "-20px", right: "10px" }}
-              placement="right"
+        <AnimatePresence initial={false}>
+          {openSidebar && (
+            <motion.div
+              initial={{ opacity: 1, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ type: "spring" }}
+              key="box"
+              className="sticky right-0 py-20 bottom-0 h-full w-full z-2 flex flex-col gap-7 items-center justify-center z-50"
             >
               {renderOptions(options)}
-            </FloatButton.Group>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </label>
     </div>
   );
 }

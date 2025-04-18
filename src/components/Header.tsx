@@ -6,9 +6,12 @@ export default function Header() {
   const options = ["Home", "About", "Projects", "Contact"];
   const renderOptions = (options: string[]) => {
     return options.map((option) => (
-      <div className="text-primary font-primary text-[18px] font-medium hover:font-semibold w-[98px] text-center">
+      <a
+        href={`#${option.toLowerCase()}`}
+        className="text-primary font-primary text-[18px] font-medium hover:font-semibold w-[98px] text-center"
+      >
         {option}
-      </div>
+      </a>
     ));
   };
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +45,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="h-full flex flex-row items-center justify-center md:hidden">
+      <div className="h-full flex flex-row items-center justify-center md:hidden ">
         <Sidebar />
       </div>
     </div>
