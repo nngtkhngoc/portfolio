@@ -13,6 +13,7 @@
   --animate-typing: typing 3s steps(20) infinite alternate, blink 0.7s infinite;
   --animate-zoom: zoom 2s infinite alternate;
   --animate-jump: jump 2s infinite;
+  --animate-scroll: infinite-scroll 25s linear infinite;
   --animate-slider: slider 40s linear infinite;
   --shadow-custom: 5px 5px 0 #5e794c;
 
@@ -74,6 +75,15 @@
     }
     100% {
       transform: translateX(calc(-250px * 6));
+    }
+  }
+
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
     }
   }
 }

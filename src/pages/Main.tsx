@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import BubbleCursor from "../components/Cursor";
 import { useScroll, motion } from "framer-motion";
 // import Space from "../components/Space";
+import Slider from "../components/Slider";
 
 export default function Main() {
   const { scrollYProgress } = useScroll();
@@ -15,11 +16,11 @@ export default function Main() {
   return (
     <div className="bg-background relative">
       <AnimatePresence>
-        {" "}
         <BubbleCursor />
         <Header />
         <FloatingElements />
         <Home />
+        <Slider />
         <About />
         <Projects />
         <motion.div

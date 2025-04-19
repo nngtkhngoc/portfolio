@@ -2,12 +2,11 @@ import mobileprofile from "../assets/profile.png";
 import green from "../assets/greenicon.png";
 import pink from "../assets/pinkicon.png";
 import { motion } from "framer-motion";
-
 export default function Home() {
   return (
     <div
       id="home"
-      className="w-full items-center justify-center flex flex-col py-3 relative font-primary gap-8 md:grid md:grid-cols-2 md:px-20 xl:gap-x-10"
+      className="w-full pb-6 items-center justify-center flex flex-col py-3 relative font-primary gap-8 md:grid md:grid-cols-2 md:px-20 xl:gap-x-10"
     >
       <div className="w-full items-center justify-center flex flex-col  md:order-1 md:col-span-1 ">
         <motion.img
@@ -29,7 +28,7 @@ export default function Home() {
         <motion.img
           src={green}
           alt="icon"
-          className="absolute right-10 bottom-73 w-[68px] md:right-30 md:bottom-10 xl:right-75 xl:w-[88px]"
+          className="absolute right-10 bottom-100 z-10 w-[68px] md:right-30 md:bottom-10 xl:right-75 xl:w-[88px]"
           initial={{ opacity: 1, y: 0 }}
           animate={{
             y: [0, 5, 0],
@@ -43,25 +42,36 @@ export default function Home() {
           }}
         />
         <motion.img
-          initial={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -200 }}
           animate={{
-            y: [0, -3, 0],
-            x: [0, 5, 0, -10, 0],
+            opacity: 1,
+            x: [0, 0, 5, -10, 0],
+            y: [0, -5, 0],
           }}
           transition={{
-            duration: 10,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut",
+            opacity: { duration: 0.8, ease: "easeInOut" },
+            x: {
+              delay: 0.8,
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            },
+            y: {
+              delay: 0.8,
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            },
           }}
           src={mobileprofile}
           alt="dev"
-          className="w-4/5 md:w-4/5 xl:place-self-start"
+          className="w-4/5 md:w-full lg:w-4/5 xl:place-self-start"
         />
       </div>
-
       <div className="text-primary text-[20px] flex flex-col items-center px-4 md:col-span-1 md:items-start w-full xl:pl-10">
-        <div className="lg:text-[35px] md:mx-2 lg:mb-2 xl:mb-4 w-max animate-typing whitespace-nowrap overflow-hidden border-r-[2px] border-r-primary">
+        <div className="lg:text-[35px] mb-2 md:mx-2 lg:mb-2 xl:mb-4 w-max animate-typing whitespace-nowrap overflow-hidden border-r-[2px] border-r-primary">
           Hello, I'm
         </div>
         <div className="xl:text-[90px]  xl:before:-bottom-7 font-secondary text-secondary text-[40px] lg:text-[60px] w-max h-max px-2 text-sm/6 md:text-sm/8 md:text-[45px] relative z-10 text-center before:absolute before:-z-5 before:w-full before:h-1/2 before:bg-side before:left-0 before:-bottom-3">

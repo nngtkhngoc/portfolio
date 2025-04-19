@@ -35,9 +35,7 @@ export default function Header() {
           <Logo />
         </div>
         <div className="hidden md:block md:col-span-9 md:flex md:flex-row md:justify-center md:items-center md:gap-7">
-          <div className="hidden lg:block w-full border border-dashed border-2  ml-6">
-            {" "}
-          </div>
+          <div className="hidden lg:block w-full border border-dashed border-2  ml-15 xl:ml-6"></div>
           {renderOptions(options)}
           <div className="hidden lg:block w-full border border-dashed border-2  ml-6">
             {" "}
