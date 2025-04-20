@@ -7,14 +7,14 @@ import ScrollToTop from "../components/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
 import BubbleCursor from "../components/Cursor";
 import { useScroll, motion } from "framer-motion";
-// import Space from "../components/Space";
 import Slider from "../components/Slider";
+import Contact from "../components/Contact";
 
 export default function Main() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div className="bg-background relative overflow-x-hidden">
+    <div className="bg-background relative overflow-x-hidden pb-10">
       <AnimatePresence>
         <BubbleCursor />
         <Header />
@@ -37,6 +37,7 @@ export default function Main() {
           }}
         />
         <ScrollToTop />
+        <Contact />
         <Slider />
       </AnimatePresence>
     </div>

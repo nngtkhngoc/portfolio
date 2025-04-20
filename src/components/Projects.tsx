@@ -60,7 +60,7 @@ export default function Projects() {
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: "ease-in-out", duration: "0.8" }}
-          viewport={{ amount: 0.1 }}
+          viewport={{ amount: 0.8 }}
           className="font-secondary text-secondary text-[50px] md:text-[70px] xl:text-[90px]  text-shadow-lg md:pr-8"
         >
           projects.

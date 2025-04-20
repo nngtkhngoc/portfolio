@@ -16,7 +16,8 @@
   --animate-scroll: infinite-scroll 25s linear infinite;
   --animate-slider: slider 40s linear infinite;
   --shadow-custom: 5px 5px 0 #5e794c;
-
+  --breakpoint-mobile: 500px;
+  /* --breakpoint-tablet: 653px; */
   @keyframes bounce {
     0%,
     100% {

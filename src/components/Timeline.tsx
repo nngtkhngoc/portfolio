@@ -1,6 +1,7 @@
 import lqd from "../assets/lqd.png";
 import uit from "../assets/uit.png";
-import { useScroll, motion } from "framer-motion";
+import { useScroll, motion, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 interface event {
   timestamp: string;
@@ -65,20 +66,25 @@ export default function Timeline() {
       </motion.li>
     ));
   };
-  const { scrollYProgress } = useScroll();
+
+  const targetRef = useRef(null); // 👈 tạo ref cho vùng theo dõi scroll
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end center"], // 👈 chính xác hơn
+  });
+
+  const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div className="relative ms-2">
+    <div ref={targetRef} className="relative ms-2">
       <motion.div
         style={{
-          scaleY: scrollYProgress,
+          scaleY,
           originY: 0,
           backgroundColor: "#5e794c",
         }}
-        viewport={{ amount: 0.9 }}
-        className="absolute  left-1.5 top-2 w-[3px] h-9/10 bg-secondary rounded"
+        className="absolute left-1.5 top-2 w-[3px] h-full bg-secondary rounded"
       />
-
       <ol className="relative ms-2">{renderEvents(events)}</ol>
     </div>
   );
