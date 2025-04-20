@@ -53,11 +53,11 @@ export default function Home() {
             x: [0, 0, 5, -10, 0],
             y: [0, -5, 0],
           }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ amount: 0.8 }}
+          initial={{ opacity: 0, translateX: 400 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          viewport={{ amount: 0.2 }}
           transition={{
-            duration: 0.8,
+            duration: 1.5,
             ease: "easeInOut",
             x: {
               delay: 0.8,
@@ -93,7 +93,7 @@ export default function Home() {
           initial={{ opacity: 0, translateY: 20 }}
           whileInView={{ opacity: 1, translateY: 0 }}
           viewport={{ amount: 0.8 }}
-          transition={{ type: "ease-in-out", duration: "0.8" }}
+          transition={{ type: "ease-in-out", duration: "1.2" }}
           className="xl:text-[90px]  xl:before:-bottom-7 font-secondary text-secondary text-[40px] lg:text-[60px] w-max h-max px-2 text-sm/6 md:text-sm/8 md:text-[45px] relative z-10 text-center before:absolute before:-z-5 before:w-full before:h-1/2 before:bg-side before:left-0 before:-bottom-3"
         >
           Khanh Ngoc
@@ -102,7 +102,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ amount: 0.8 }}
-          transition={{ type: "ease-in-out", duration: "0.8" }}
+          transition={{ type: "ease-in-out", duration: "1.5", delay: 0.2 }}
           className="text-primary text-[14px] pt-8 px-2 md:pl-2 md:pr-0 md:pt-5 lg:pt-8 text-sm/6 text-justify w-full lg:pr-20 xl:pt-13"
         >
           Second-year Software Engineering student with foundational knowledge
@@ -110,8 +110,8 @@ export default function Home() {
           to learn, and eager to contribute to a dynamic product team.
         </motion.div>
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ amount: 0.8 }}
           transition={{ type: "ease-in-out", duration: "0.8" }}
           className="mt-5 text-[20px] text-side bg-secondary transform rounded-[6px] px-6 py-3  relative z-10 hover:before:translate-x-0 hover:before:translate-y-0 before:transition-all before:duration-500 before:-z-5 hover:before:bg-side hover:text-secondary before:w-full before:h-full before:border-side before:border-[1px] before:top-0 before:left-0 before:border before:absolute before:rounded-[6px] before:transform before:-translate-x-[5px] before:-translate-y-[5px]"

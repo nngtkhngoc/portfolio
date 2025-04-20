@@ -14,7 +14,7 @@ export default function Main() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div className="bg-background relative">
+    <div className="bg-background relative overflow-x-hidden">
       <AnimatePresence>
         <BubbleCursor />
         <Header />
@@ -37,6 +37,7 @@ export default function Main() {
           }}
         />
         <ScrollToTop />
+        <Slider />
       </AnimatePresence>
     </div>
   );

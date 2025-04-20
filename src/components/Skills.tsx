@@ -30,7 +30,7 @@ export default function Skills() {
       <motion.div
         variants={item}
         key={idx}
-        className="bg-secondary  px-5 py-3 rounded-[20px] font-bold text-side shadow-[5px_5px_0px_0px_#EDC5C8] hover:bg-side hover:shadow-[5px_5px_0px_0px_#5e794c] hover:text-secondary transition-all duration-500"
+        className="bg-secondary  px-5 py-3 rounded-[20px] font-bold text-side shadow-[5px_5px_0px_0px_#EDC5C8] hover:bg-side hover:shadow-md hover:text-secondary transition-all duration-500"
       >
         {skill}
       </motion.div>

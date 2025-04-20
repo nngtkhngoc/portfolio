@@ -4,14 +4,14 @@ import Skills from "./Skills";
 
 export default function About() {
   return (
-    <div className="px-2 py-7 pt-6  lg:py-7 font-primary  ">
+    <div className="px-2 pt-7 pb-5 md:pb-0 font-primary" id="about">
       {/* title */}
       <div className="w-full flex flex-row justify-center items-center md:pl-5 gap-1 lg:pl-10 lg:pr-3 ">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
+          initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ type: "ease-in-out", duration: "0.8" }}
-          viewport={{ amount: 0.9 }}
+          transition={{ type: "ease-in-out", duration: "1.2" }}
+          viewport={{ amount: 0.2 }}
           className="font-secondary text-secondary text-[50px] md:text-[70px] xl:text-[90px] xl:pl-4 text-shadow-lg"
         >
           about.
