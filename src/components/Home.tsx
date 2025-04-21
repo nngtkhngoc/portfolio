@@ -62,7 +62,7 @@ export default function Home() {
             x: [0, 0, 5, -10, 0],
             y: [0, -5, 0],
           }}
-          initial={{ opacity: 0, translateX: 400 }}
+          initial={{ opacity: 0, translateX: 100 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           viewport={{ amount: 0.2 }}
           transition={{
