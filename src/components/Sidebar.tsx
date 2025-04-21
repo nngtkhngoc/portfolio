@@ -46,7 +46,7 @@ export default function Sidebar() {
         key={index}
         className="bg-white shadow-lg rounded-full w-[40px] h-[40px] flex flex-col items-center justify-center focus:bg-side"
         onClick={() => {
-          console.log(option.text);
+          setOpenSidebar(!openSidebar);
         }}
         href={`#${option.text.toLowerCase()}`}
       >
@@ -63,7 +63,6 @@ export default function Sidebar() {
           type="checkbox"
           onChange={() => {
             setOpenSidebar(!openSidebar);
-            console.log(openSidebar);
           }}
         />
         <div className="rounded-2xl h-[3px] w-1/2 bg-primary duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]"></div>
