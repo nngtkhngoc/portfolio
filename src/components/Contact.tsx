@@ -59,7 +59,7 @@ export default function Contact() {
   };
 
   return (
-    <div className=" pb-10">
+    <div className=" pb-10" id="contact">
       <div className="w-full flex flex-row justify-center items-center md:pl-5 gap-1 lg:pl-10 lg:pr-3 mb-5 pl-3">
         <motion.div
           initial={{ opacity: 0, x: -60 }}
