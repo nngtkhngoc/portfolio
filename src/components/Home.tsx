@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "src/assets/NguyenThiKhanhNgoc_Resume_Fullstack.pdf"; // hoặc URL động
+    link.href = "public/NguyenThiKhanhNgoc_Resume_Fullstack.pdf"; // hoặc URL động
     link.download = "NguyenThiKhanhNgoc_Resume.pdf"; // tên file sau khi tải về
     document.body.appendChild(link);
     link.click();
