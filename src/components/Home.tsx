@@ -3,6 +3,15 @@ import green from "../assets/greenicon.png";
 import pink from "../assets/pinkicon.png";
 import { motion } from "framer-motion";
 export default function Home() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "src/assets/NguyenThiKhanhNgoc_Resume_Fullstack.pdf"; // hoặc URL động
+    link.download = "NguyenThiKhanhNgoc_Resume.pdf"; // tên file sau khi tải về
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div
       id="home"
@@ -109,8 +118,8 @@ export default function Home() {
           in full-stack web development. Passionate about problem solving, quick
           to learn, and eager to contribute to a dynamic product team.
         </motion.div>
-        <motion.a
-          href="src\assets\NguyenThiKhanhNgoc_Resume_Fullstack.pdf"
+        <motion.button
+          onClick={handleDownload}
           initial={{ opacity: 0, scale: 0 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ amount: 0.8 }}
@@ -118,7 +127,7 @@ export default function Home() {
           className="mt-5 text-[20px] text-side bg-secondary transform rounded-[6px] px-6 py-3  relative z-10 hover:before:translate-x-0 hover:before:translate-y-0 before:transition-all before:duration-500 before:-z-5 hover:before:bg-side hover:text-secondary before:w-full before:h-full before:border-side before:border-[1px] before:top-0 before:left-0 before:border before:absolute before:rounded-[6px] before:transform before:-translate-x-[5px] before:-translate-y-[5px]"
         >
           Resume
-        </motion.a>
+        </motion.button>
       </div>
     </div>
   );
