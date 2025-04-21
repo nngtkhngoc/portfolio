@@ -57,7 +57,7 @@ export default function Projects() {
       <div className="w-full flex flex-row justify-center items-center gap-1 pr-2">
         <div className="w-full border-dashed border-side my-2 border-2 "></div>
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: "ease-in-out", duration: "0.8" }}
           viewport={{ amount: 0.8 }}
