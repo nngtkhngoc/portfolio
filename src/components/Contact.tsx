@@ -1,6 +1,6 @@
 import RollingGallery from "./MenuCards";
 import { motion } from "framer-motion";
-import { Github, Mail, Linkedin, Phone } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 import { ReactElement } from "react";
 
 interface contact {
@@ -20,11 +20,6 @@ export default function Contact() {
     {
       name: "nngtkhngoc05@gmail.com",
       icon: <Mail />,
-      link: "/",
-    },
-    {
-      name: "0857140159",
-      icon: <Phone />,
       link: "/",
     },
   ];
