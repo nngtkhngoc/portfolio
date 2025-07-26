@@ -1,6 +1,6 @@
 import RollingGallery from "./MenuCards";
 import { motion } from "framer-motion";
-import { Github, Mail, Linkedin } from "lucide-react";
+import { Github, Mail, Linkedin, Instagram } from "lucide-react";
 import { ReactElement } from "react";
 
 interface contact {
@@ -22,6 +22,11 @@ export default function Contact() {
       icon: <Mail />,
       link: "/",
     },
+    {
+      name: "nngtkhngoc",
+      icon: <Instagram />,
+      link: "https://www.instagram.com/nngtkhngoc/",
+    },
   ];
 
   const item = {
@@ -42,7 +47,7 @@ export default function Contact() {
       <motion.div
         variants={item}
         key={idx}
-        className="bg-secondary cursor-pointer flex flex-row gap-2  px-5 py-3 rounded-[20px] font-bold text-side shadow-[5px_5px_0px_0px_#EDC5C8] hover:bg-side hover:shadow-md hover:text-secondary transition-all duration-500"
+        className="bg-secondary cursor-pointer flex flex-row gap-2  px-5 py-3 rounded-[20px] font-bold text-side shadow-[5px_5px_0px_0px_#EDC5C8] hover:bg-side hover:shadow-md hover:text-secondary transition-all duration-500 items-center justify-center"
         onClick={() => {
           window.open(contact.link, "_blank");
         }}

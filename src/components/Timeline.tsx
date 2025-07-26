@@ -1,5 +1,6 @@
 import lqd from "../assets/lqd.png";
 import uit from "../assets/uit.png";
+import schneider from "../assets/schneider.png";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -11,6 +12,12 @@ interface event {
 }
 export default function Timeline() {
   const events = [
+    {
+      timestamp: "06/2025 - Now",
+      title: "Schneider Electric (SEMV)",
+      logo: schneider,
+      description: "Digital Transformation Intern",
+    },
     {
       timestamp: "09/2023 - Now",
       title: "University of Information Technology",

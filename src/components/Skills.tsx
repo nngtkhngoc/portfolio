@@ -10,7 +10,7 @@ export default function Skills() {
     "ReactJS",
     "PostgreSQL",
     "JavaScript",
-    "Prisma",
+    "ASP.NET MVC",
   ];
   const item = {
     hidden: { opacity: 0, scale: 0 },

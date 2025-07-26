@@ -5,7 +5,6 @@ import Skills from "./Skills";
 export default function About() {
   return (
     <div className="px-2 pt-7 pb-5 md:pb-0 font-primary" id="about">
-      {/* title */}
       <div className="w-full flex flex-row justify-center items-center md:pl-5 gap-1 lg:pl-10 lg:pr-3 ">
         <motion.div
           initial={{ opacity: 0, x: -60 }}
@@ -29,7 +28,7 @@ export default function About() {
               transition={{ type: "ease-in-out", delay: 0.1, duration: "0.8" }}
               className="text-primary text-[30px] xl:text-[40px] font-bold px-2 mb-7 relative w-max z-10 after:absolute after:-z-5 after:bg-side after:w-full after:h-1/4 after:bottom-2 after:left-0"
             >
-              EDUCATION
+              EXPERIENCE
             </motion.div>
           </div>
           <Timeline />
