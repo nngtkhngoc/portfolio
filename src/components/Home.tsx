@@ -114,9 +114,9 @@ export default function Home() {
           transition={{ type: "ease-in-out", duration: "1.5", delay: 0.2 }}
           className="text-primary text-[14px] pt-8 px-2 md:pl-2 md:pr-0 md:pt-5 lg:pt-8 text-sm/6 text-justify w-full lg:pr-20 xl:pt-13"
         >
-          Second-year Software Engineering student with foundational knowledge
-          in full-stack web development. Passionate about problem solving, quick
-          to learn, and eager to contribute to a dynamic product team.
+          Aspiring Software Engineer with a strong foundation in full-stack web
+          development. Passionate about problem solving, quick to learn, and
+          eager to contribute to a dynamic and impactful product team.
         </motion.div>
         <div className="mt-5"></div>
         <motion.a
